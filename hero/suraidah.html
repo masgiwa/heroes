@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="assets/img/main/icon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+
+  <script src="assets/js/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <script src="assets/js/aos.js"></script>
+
+  <title>Heroes.</title>
+
+  <style>
+    h6 {
+      line-height: 35px;
+    }
+
+    .nav-link a {
+      color: #000;
+    }
+
+    .line-bottom {
+      border-bottom: 2px solid #FF2E67;
+    }
+
+    @media (max-width: 1200px) {
+      #story-single {
+        grid-template-columns: 50% 50%;
+        background: none;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .line-bottom {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav id="nav">
+    <h2 class="logo">
+      <div class="dot"></div>Heroes.
+    </h2>
+    <img id="nav-btn" src="assets/img/icon/nav-menu.png">
+    <div class="nav-link txt-uppercase">
+      <a href="index.html">Beranda</a>
+      <br>
+      <a href="kisah.html">Kisah inspiratif</a>
+      <br>
+      <a href="share.html">Bagikan Kisah</a>
+      <br>
+      <a href="about.html">Tentang</a>
+    </div>
+  </nav>
+
+  <header id="header-single">
+    <div class="banner">
+      <img src="assets/img/hero/suraidah/header.png" alt="" data-aos="fade-up">
+    </div>
+    <div class="caption">
+      <h1 style="color: #ff4b7c">Siti Suraidah</h1>
+      <h1>Bidan</h1>
+      <a href="#biodata-single" class="btn-round btn-line-primary">Selengkapnya</a>
+    </div>
+  </header>
+
+  <div id="biodata-single">
+    <div class="caption">
+      <h4>Mengenal Sosok Suraidah.</h4>
+      <h6>
+        Siti Suraidah ,pensiunan dosen Universitas Hasanuddin Makassar, Sulawesi Selatan itu memang memiliki jiwa sosial
+        yang tinggi.
+        Dia rela menanggalkan profesinya sebagai dosen aparatur sipil negara (ASN) di Makassar, demi mewujudkan mimpi
+        anak-anak di perbatasan negara, Sebatik.
+        Didukung Camat Sebatik Tengah, para relawan, dan Yayasan Ar-Rasyid, pada 2014, Bu Bidan mendirikan Sekolah Tapal
+        Batas di Desa Sungai Limau.
+        Suraidah, yang memiliki latar belakang master kesehatan dari lembaga pendidikan di Thailand, memulai
+        perjuangannya di Sebatik dengan membuka praktik kebidanan di tempat indekosnya.
+      </h6>
+    </div>
+    <div class="banner">
+      <img src="assets/img/hero/suraidah/biodata.png" alt="" data-aos="fade-up">
+    </div>
+  </div>
+
+  <div id="story-single">
+    <div class="banner">
+      <img src="assets/img/hero/suraidah/story.png" alt="" data-aos="fade-up">
+    </div>
+    <div class="caption">
+      <h4>Kisah Inspiratif Seorang Suraidah</h4>
+      <h6>
+        Meyakinkan calon orang tua murid, yang mayoritas buruh di perkebunan kelapa sawit Malaysia, bukanlah pekerjaan
+        mudah. Banyak orang tua tidak mengizinkan anaknya menyeberangi perbatasan negara untuk menuju sekolah yang
+        berjarak sekitar empat kilometer dari tempat tinggal mereka atau menghabiskan waktu dua jam dengan berjalan
+        kaki.
+
+        Belum lagi tantangan dari petugas perbatasan. Anak-anak harus mendapatkan izin polisi Malaysia untuk melintasi
+        perbatasan. Tanpa izin, mereka akan diburu dan ditangkap untuk dikurung selama dua hari karena telah melanggar
+        batas negara.
+      </h6>
+    </div>
+  </div>
+
+  <div id="share-about" class="txt-center">
+    <img src="assets/img/icon/quote.png" alt="" data-aos="fade-up">
+    <h4 data-aos="fade-up" data-aos-delay="300">Saat saya naik haji, saya mendapat ilmu bagaimana perjalanan Rasullaah SAW berdakwah. Dari situlah muncul niat
+      saya untuk membersihkan diri dan mau mengabdi kepada Allah dan negara,.</h4>
+    <h5 data-aos="fade-up" data-aos-delay="600">Siti Suraidah - Bidan</h5>
+  </div>
+
+  <!-- footer -->
+  <!-- <footer>
+    &copy; 2021 by Be a Heroes.
+  </footer> -->
+</body>
+<script>
+  $(document).ready(function () {
+    $('#nav-btn').click(function () {
+      $('.nav-link').slideToggle(
+      );
+    });
+  });
+
+  //Navbar Scrolling Effect
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    var width = $(window).width();
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      $('#nav').css('background', '#fff');
+      $('#nav').css('boxShadow', 'rgba(0, 0, 0, 0.2) 0px 0px 10px');
+
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+      } else {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '2px solid #FF2E67');
+      }
+    } else {
+      $('#nav').css('background', 'transparent');
+      $('#nav').css('boxShadow', 'none');
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+      }
+    }
+  }
+
+  AOS.init({
+    duration: 1200
+  });
+</script>
+
+</html>

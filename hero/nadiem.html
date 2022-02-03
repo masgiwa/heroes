@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="assets/img/main/icon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+
+  <script src="assets/js/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <script src="assets/js/aos.js"></script>
+
+  <title>Heroes.</title>
+
+  <style>
+    h6 {
+      line-height: 35px;
+    }
+
+    .nav-link a {
+      color: #000;
+    }
+
+    .line-bottom {
+      border-bottom: 2px solid #FF2E67;
+    }
+
+    @media (max-width: 1200px) {
+      #story-single {
+        grid-template-columns: 50% 50%;
+        background: none;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .line-bottom {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav id="nav">
+    <h2 class="logo">
+      <div class="dot"></div>Heroes.
+    </h2>
+    <img id="nav-btn" src="assets/img/icon/nav-menu.png">
+    <div class="nav-link txt-uppercase">
+      <a href="index.html">Beranda</a>
+      <br>
+      <a href="kisah.html">Kisah inspiratif</a>
+      <br>
+      <a href="share.html">Bagikan Kisah</a>
+      <br>
+      <a href="about.html">Tentang</a>
+    </div>
+  </nav>
+
+  <header id="header-single">
+    <div class="banner">
+      <img src="assets/img/hero/nadiem/header.png"" data-aos="fade-up">
+    </div>
+    <div class=" caption">
+      <h1 style="color: #ff4b7c">Nadiem Makarim</h1>
+      <h1>Menteri Pendidikan</h1>
+      <a href="#biodata-single" class="btn-round btn-line-primary">Selengkapnya</a>
+    </div>
+  </header>
+
+  <div id="biodata-single">
+    <div class="caption">
+      <h4>Mengenal Sosok Nadiem Makarim.</h4>
+      <h6>
+        Nadiem Anwar Makarim, B.A., M.B.A. (lahir di Singapura, 4 Juli 1984; umur 35 tahun) adalah seorang
+        pengusaha Indonesia yang saat ini menjabat sebagai Menteri Pendidikan dan Kebudayaan Indonesia pada Kabinet
+        Indonesia Maju pemerintahan Presiden Joko Widodo-K.H Mar'uf Amin, yang dilantik pada 23 Oktober 2019. Dia
+        merupakan pendiri Gojek, sebuah perusahaan transportasi dan penyedia jasa berbasis daring yang beroperasi di
+        Indonesia dan sejumlah negara Asia Tenggara seperti Singapura, Vietnam dan Thailand.
+      </h6>
+    </div>
+    <div class="banner">
+      <img src="assets/img/hero/nadiem/biodata.png" alt="" data-aos="fade-up">
+    </div>
+  </div>
+
+  <div id="story-single">
+    <div class="banner">
+      <img src="assets/img/hero/nadiem/story.png" alt="" data-aos="fade-up">
+    </div>
+    <div class="caption">
+      <h4>Kisah Inspiratif Seorang Nadiem Makarim</h4>
+      <h6>
+        Pada Mei 2019, Nadiem menjadi tokoh termuda se-Asia yang menerima penghargaan Nikkei Asia Prize ke-24 untuk
+        Inovasi Ekonomi dan Bisnis. Penghargaan diberikan kepada individu atau organisasi yang berkontribusi bagi
+        pengembangan kawasan Asia dan menciptakan masa depan yang lebih baik bagi masyarakat Asia. Gojek berkontribusi 55 Triliun terhadap perekonomian Indonesia, dengan
+        penghasilan rata-rata mitra GoRide dan GoCar naik 45% dan 42% setelah bergabung dengan Gojek, dan volume
+        transaksi UMKM Kuliner naik 3.5 kali lipat semenjak menjadi mitra GoFood.
+      </h6>
+    </div>
+  </div>
+
+  <div id="share-about" class="txt-center">
+    <img src="assets/img/icon/quote.png" alt="" data-aos="fade-up">
+    <h4 data-aos="fade-up" data-aos-delay="300">Orang cenderung takut untuk memulai ide bisnisnya, terutama jika ide tersebut tidak terlalu dikuasainya. Untuk berani, kita memang harus menggali.</h4>
+    <h5 data-aos="fade-up" data-aos-delay="600">Nadiem Marakirm - Menteri Pendidikan RI</h5>
+  </div>
+
+  <!-- footer -->
+  <!-- <footer>
+    &copy; 2021 by Be a Heroes.
+  </footer> -->
+</body>
+<script>
+  $(document).ready(function () {
+    $('#nav-btn').click(function () {
+      $('.nav-link').slideToggle(
+      );
+    });
+  });
+
+  //Navbar Scrolling Effect
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    var width = $(window).width();
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      $('#nav').css('background', '#fff');
+      $('#nav').css('boxShadow', 'rgba(0, 0, 0, 0.2) 0px 0px 10px');
+
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+      } else {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '2px solid #FF2E67');
+      }
+    } else {
+      $('#nav').css('background', 'transparent');
+      $('#nav').css('boxShadow', 'none');
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+      }
+    }
+  }
+
+  AOS.init({
+    duration: 1200
+  });
+</script>
+
+</html>

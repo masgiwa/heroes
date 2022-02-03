@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="assets/img/main/icon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+
+  <script src="assets/js/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <script src="assets/js/aos.js"></script>
+
+  <title>Heroes.</title>
+
+  <style>
+    h1 {
+      margin: 0;
+    }
+
+    .logo {
+      color: #fff;
+    }
+
+    .nav-link a {
+      color: #000;
+    }
+
+    .line-bottom {
+      border-bottom: 2px solid #FF2E67;
+    }
+
+    @media screen and (max-width: 800px) {
+      .line-bottom {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav id="nav">
+    <h2 class="logo">
+      <div class="dot"></div>Heroes.
+    </h2>
+    <img id="nav-btn" src="assets/img/icon/nav-menu.png">
+    <div class="nav-link txt-uppercase">
+      <a href="index.html">Beranda</a>
+      <br>
+      <a href="kisah.html">Kisah inspiratif</a>
+      <br>
+      <a href="kisah.html">Bagikan Kisah</a>
+      <br>
+      <a class="line-bottom">Tentang</a>
+    </div>
+  </nav>
+
+  <!-- header -->
+  <header id="header-about">
+    <h1>Bersama Berbagi Inspirasi</h1>
+    <h5>Heroes. menyalurkan inspirasi dan semangat para pahlawan perubahan demi bertumbuhnya semangat kemajuan bagi
+      masyarakat.</h5>
+  </header>
+
+  <div id="definition-about" class="txt-center">
+    <div>
+      <h4 class="txt-thin">Tentang </h4>
+      <h4> Heroes. ?</h4>
+    </div>
+    <h5>
+      Heroes. merupakan aplikasi website yang diciptakan guna memberikan edukasi dan inspirasi kepada masyarakat dalam
+      upaya mewujudkan perubahan. Be Hero berupaya merangkul seluruh elemen masyarakat untuk bisa menjadi pahlawan
+      perubahan untuk membangun negeri yang lebih baik.
+    </h5>
+  </div>
+
+  <div id="latar-belakang">
+    <div class="banner">
+      <img src="assets/img/main/intro-home.png" alt="" data-aos="fade-up">
+    </div>
+    <div class="caption">
+      <h4>Latar Belakang Heroes.</h4>
+      <h5>
+        Berawal dari masalah kepercayaan diri dan lunturnya semangat berinovasi yang terjadi pada masyarakat
+        Indonesia, Heroes. yang ingin membantu membangkitkan kembali semangat tersebut melalui berbagai kisah tokoh
+        inspiratif yang memberikan perubahan positif bagi mayarakat sekitar.
+      </h5>
+    </div>
+  </div>
+
+  <div id="share-about" class="txt-center">
+    <h4 data-aos="fade-up">Bantu Kami Mewujudkan Perubahan</h4>
+    <h5 data-aos="fade-up" data-aos-delay="300">
+      Bantu kami mewujudkan misi perubahan. Bagikan pengalaman hebatmu dan jadilah inspirasi bagi sekitarmu, ciptakan
+      perubahan sesuai ekspresi dan
+      caramu sendiri.
+    </h5>
+    <a href="share.html" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="600">Bagikan Kisahmu</a>
+  </div>
+
+  <!-- footer -->
+  <!-- <footer>
+    &copy; 2021 by Be a Heroes.
+  </footer> -->
+</body>
+<script>
+  $(document).ready(function () {
+    $('#nav-btn').click(function () {
+      $('.nav-link').slideToggle(
+      );
+    });
+  });
+
+  //Navbar Scrolling Effect
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    var width = $(window).width();
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      $('#nav').css('background', '#fff');
+      $('#nav').css('boxShadow', 'rgba(0, 0, 0, 0.2) 0px 0px 10px');
+
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+      } else {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '2px solid #FF2E67');
+        $('.logo').css('color', '#000');
+      }
+    } else {
+      $('#nav').css('background', 'transparent');
+      $('#nav').css('boxShadow', 'none');
+      $('.logo').css('color', '#fff');
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+        $('.logo').css('color', '#000');
+      }
+    }
+  }
+
+  AOS.init({
+    duration: 1200
+  });
+</script>
+
+</html>

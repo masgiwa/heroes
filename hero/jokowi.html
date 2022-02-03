@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="assets/img/main/icon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+
+  <script src="assets/js/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <script src="assets/js/aos.js"></script>
+
+  <title>Heroes.</title>
+
+  <style>
+    h6 {
+      line-height: 35px;
+    }
+
+    .nav-link a {
+      color: #000;
+    }
+
+    .line-bottom {
+      border-bottom: 2px solid #FF2E67;
+    }
+
+    @media screen and (max-width: 800px) {
+      .line-bottom {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav id="nav">
+    <h2 class="logo">
+      <div class="dot"></div>Heroes.
+    </h2>
+    <img id="nav-btn" src="assets/img/icon/nav-menu.png">
+    <div class="nav-link txt-uppercase">
+      <a href="index.html">Beranda</a>
+      <br>
+      <a href="kisah.html">Kisah inspiratif</a>
+      <br>
+      <a href="share.html">Bagikan Kisah</a>
+      <br>
+      <a href="about.html">Tentang</a>
+    </div>
+  </nav>
+
+  <header id="header-single">
+    <div class="banner">
+      <img src="assets/img/hero/jokowi/header.png" alt="" data-aos="fade-up">
+    </div>
+    <div class="caption">
+      <h1 style="color: #ff4b7c">Ir. H. Joko Widodo</h1>
+      <h1>Presiden Indonesia</h1>
+      <a href="#biodata-single" class="btn-round btn-line-primary">Selengkapnya</a>
+    </div>
+  </header>
+
+  <div id="biodata-single">
+    <div class="caption">
+      <h4>Mengenal Sosok Jokowi.</h4>
+      <h6>
+        Ir. H. Joko Widodo atau Jokowi (lahir di Surakarta, Jawa Tengah, 21 Juni 1961; umur 58 tahun) adalah Presiden
+        ke-7 Indonesia yang mulai menjabat sejak 20 Oktober 2014. Ia terpilih bersama Wakil Presiden Muhammad Jusuf
+        Kalla dalam Pemilu Presiden 2014 dan kembali terpilih bersama Wakil Presiden Ma'ruf Amin dalam Pemilu Serentak
+        2019. <br>brJokowi pernah menjabat Gubernur DKI Jakarta sejak 15 Oktober 2012 hingga 16 Oktober 2014 didampingi
+        Basuki
+        Tjahaja Purnama sebagai wakil gubernur. Sebelumnya, ia adalah Wali Kota Surakarta (Solo), sejak 28 Juli 2005
+        hingga 1 Oktober 2012 didampingi F.X. Hadi Rudyatmo sebagai wakil wali kota.
+      </h6>
+    </div>
+    <div class="banner">
+      <img src="assets/img/hero/jokowi/biodata.png" alt="" data-aos="fade-up">
+    </div>
+  </div>
+
+  <div id="story-single">
+    <div class="banner">
+      <img src="assets/img/hero/jokowi/story.png" alt="" data-aos="fade-up">
+    </div>
+    <div class="caption">
+      <h4>Kisah Inspiratif Seorang Jokowi</h4>
+      <h6>
+        Joko Widodo lahir dari pasangan Noto Mihardjo dan Sudjiatmi. Ia merupakan anak sulung dan putra satu-satunya
+        dari empat bersaudara. Ia memiliki tiga orang adik perempuan bernama Iit Sriyantini, Ida Yati, dan Titik
+        Relawati.Ia sebenarnya memiliki seorang adik laki-laki bernama Joko Lukito, tetapi meninggal saat
+        persalinan. Sebelum berganti nama, Joko Widodo memiliki nama kecil Mulyono.Ayahnya berasal dari
+        Karanganyar, sementara kakek dan neneknya berasal dari sebuah desa di Boyolali.Pendidikannya diawali dengan
+        masuk SD Negeri 112 Tirtoyoso yang dikenal sebagai sekolah untuk kalangan menengah ke bawah.
+      </h6>
+    </div>
+  </div>
+
+  <div id="share-about" class="txt-center">
+    <img src="assets/img/icon/quote.png" alt="" data-aos="fade-up">
+    <h4 data-aos="fade-up" data-aos-delay="300">Bukan kesulitan yang membuat kita takut, tapi sering ketakutanlah yang membuat jadi sulit. Jadi, jangan mudah menyerah.</h4>
+    <h5 data-aos="fade-up" data-aos-delay="600">Ir. H. Joko Widodo - Presiden Indonesia</h5>
+  </div>
+
+  <!-- footer -->
+  <!-- <footer>
+    &copy; 2019 by Be a Heroes.
+  </footer> -->
+</body>
+<script>
+  $(document).ready(function () {
+    $('#nav-btn').click(function () {
+      $('.nav-link').slideToggle(
+      );
+    });
+  });
+
+  //Navbar Scrolling Effect
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    var width = $(window).width();
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      $('#nav').css('background', '#fff');
+      $('#nav').css('boxShadow', 'rgba(0, 0, 0, 0.2) 0px 0px 10px');
+
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+      } else {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '2px solid #FF2E67');
+      }
+    } else {
+      $('#nav').css('background', 'transparent');
+      $('#nav').css('boxShadow', 'none');
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+      }
+    }
+  }
+
+  AOS.init({
+    duration: 1200
+  });
+</script>
+
+</html>

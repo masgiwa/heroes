@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="assets/img/main/icon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+
+  <script src="assets/js/all.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <script src="assets/js/aos.js"></script>
+
+  <title>Heroes.</title>
+
+  <style>
+    .nav-link a {
+      color: #000;
+    }
+
+    .line-bottom {
+      border-bottom: 2px solid #FF2E67;
+    }
+
+    @media screen and (max-width: 800px) {
+      .line-bottom {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav id="nav">
+    <h2 class="logo">
+      <div class="dot"></div>Heroes.
+    </h2>
+    <img id="nav-btn" src="assets/img/icon/nav-menu.png">
+    <div class="nav-link txt-uppercase">
+      <a href="index.html">Beranda</a>
+      <br>
+      <a href="/pages/kisah.html">Kisah inspiratif</a>
+      <br>
+      <a class="line-bottom">Bagikan Kisah</a>
+      <br>
+      <a href="/pages/about.html">Tentang</a>
+    </div>
+  </nav>
+
+  <!-- header -->
+  <header id="header-share">
+    <div class="banner">
+      <img class="img-1" src="assets/img/main/share-banner.png" alt="" data-aos="fade-up">
+    </div>
+    <div class="caption">
+      <h1>
+        Jadilah Pahlawan dengan Kisahmu
+      </h1>
+      <h5>
+          Bagikan pengalaman hebatmu dan jadilah inspirasi bagi sekitarmu, ciptakan perubahan sesuai ekspresi dan caramu sendiri.
+      </h5>
+      <a href="#step-share" class="btn-round btn-line-primary">Bagikan</a>
+    </div>
+  </header>
+
+  <div id="step-share">
+    <h4>Bagaimana saya bisa membagikan cerita saya?</h4>
+    <h5>
+      Hanya beberapa langkah saja untuk membuat kamu bisa menginspirasi banyak orang. Berikut adalah tahapan yang
+      perlu kamu lakukan untuk menambahkan kisah inspirasimu dalam artikel.
+    </h5>
+    <div class="step">
+
+      <div class="point">
+        <div class="number-point" data-aos="fade-right">
+          <h6>1</h6>
+        </div>
+        <h5>Isikan data pada <a href="#input-share">Form Artikel</a>, data meliputi data diri dan juga konten dari
+          artikel itu sendiri. Lalu tekan tombol "Kirim" yang terletak pada bagian bawah form.</h5>
+      </div>
+
+      <div class="point">
+          <div class="number-point" data-aos="fade-right" data-aos-delay="300">
+            <h6>2</h6>
+          </div>
+          <h5>Setelah data terkirim, pihak BeHero akan menilai konten dan akan mengkonfirmasi tantang pemasangan konten yang bersangkutan.</h5>
+        </div>
+      
+
+      <div class="point">
+          <div class="number-point" data-aos="fade-right" data-aos-delay="600">
+            <h6>3</h6>
+          </div>
+          <h5>Begitulah cara berbagi cerita, mudah bukan? <a href="#input-share">coba aja dulu ...</a></h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="input-share">
+    <div class="card-title">
+      <h5>Form Artikel</h5>
+      <h6>Write your article</h6>
+    </div>
+    <form>
+      <input type="text" class="input-line" placeholder="Nama Penulis">
+      <input type="email" class="input-line" placeholder="Alamat Email">
+      <textarea class="input-line" placeholder="Isi Artikel" rows="5"></textarea>
+      <button class="btn btn-primary">Kirim</button>
+    </form>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    &copy; 2021 by Be a Heroes.
+  </footer>
+</body>
+<script>
+  $(document).ready(function () {
+    $('#nav-btn').click(function () {
+      $('.nav-link').slideToggle(
+      );
+    });
+  });
+
+  //Navbar Scrolling Effect
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    var width = $(window).width();
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      $('#nav').css('background', '#fff');
+      $('#nav').css('boxShadow', 'rgba(0, 0, 0, 0.2) 0px 0px 10px');
+
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+      } else {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '2px solid #FF2E67');
+      }
+    } else {
+      $('#nav').css('background', 'transparent');
+      $('#nav').css('boxShadow', 'none');
+
+      if (width < 800) {
+        $('.nav-link > a').css('color', '#000');
+        $('.line-bottom').css('borderBottom', '0');
+      }
+    }
+  }
+
+  AOS.init({
+    duration: 1200
+  });
+</script>
+
+</html>
